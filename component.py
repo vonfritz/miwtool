@@ -51,7 +51,7 @@ class Component:
         if self.static_image:
             self.static_image.save(path / "static.png")
         if isinstance(self.sattr, Component.MaskedRotationAttr):
-            self.sattr.masked_image.save(path / "mask.png")
+            self.masked_image.save(path / "mask.png")
 
         dump = {}
         if self.comp_type == Component.WIDGET:

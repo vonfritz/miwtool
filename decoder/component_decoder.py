@@ -59,12 +59,12 @@ class ComponentDecoder(Decoder):
 
                 if ctype == INVERSE_COORDINATES_TABLE["RMSS"]: # rotational masked
                     component.sattr = Component.MaskedRotationAttr()
-                    component.sattr.mask_max_value = WIDGET_CONFIGURATION_OFFSETS["mask_max_value"].extract(self)
-                    component.sattr.mask_pivot_x = WIDGET_CONFIGURATION_OFFSETS["mask_pivot_x"].extract(self)
-                    component.sattr.mask_pivot_y = WIDGET_CONFIGURATION_OFFSETS["mask_pivot_y"].extract(self)
-                    component.sattr.mask_max_degrees = WIDGET_CONFIGURATION_OFFSETS["mask_max_degrees"].extract(self)
-                    component.sattr.mask_unk_1 = WIDGET_CONFIGURATION_OFFSETS["mask_unk_1"].extract(self)
-                    component.sattr.mask_unk_2 = WIDGET_CONFIGURATION_OFFSETS["mask_unk_2"].extract(self)
+                    component.sattr.mask_max_value = WIDGET_CONFIGURATION_OFFSETS["RMSS"]["mask_max_value"].extract(self)
+                    component.sattr.mask_pivot_x = WIDGET_CONFIGURATION_OFFSETS["RMSS"]["mask_pivot_x"].extract(self)
+                    component.sattr.mask_pivot_y = WIDGET_CONFIGURATION_OFFSETS["RMSS"]["mask_pivot_y"].extract(self)
+                    component.sattr.mask_max_degrees = WIDGET_CONFIGURATION_OFFSETS["RMSS"]["mask_max_degrees"].extract(self)
+                    component.sattr.mask_unk_1 = WIDGET_CONFIGURATION_OFFSETS["RMSS"]["mask_unk_1"].extract(self)
+                    component.sattr.mask_unk_2 = WIDGET_CONFIGURATION_OFFSETS["RMSS"]["mask_unk_2"].extract(self)
 
                 has_values_ranges = WIDGET_CONFIGURATION_OFFSETS["has_values_ranges"].extract(self)
                 if has_values_ranges == 0x2:
